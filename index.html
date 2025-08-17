@@ -7,45 +7,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Morse traduction</title>
     <link href="./main.css" rel="stylesheet">
-    <script src="./main.js" ></script>
+    
 </head>
 
-<body>
-    <header id="diag">
-        
-        <h1> VEULLIER SELECTIONNER VOTRE MODE DE TRADUCTION DANS LE MENUE ! </h1>
-    
-    <nav>
-        <ul>
-            <li id="morse" onclick="etat(1)"> MorseToTexte</li>
-            <li id="texte"onclick="etat(0)">TexteToMorse</li>
-        </ul>
-    </nav>
-</header>
-<section>
-        <h2 id="titre">AUCUN CHOIX </h2> 
-        <textarea rows="10" cols="50" id="input">
-
-    </textarea>
-    <br/>
-    
-    </section>
-    <br/>
- 
-    <section id="ex">
-        <a id="btn" onclick="execution()">EXECUTION</a>
-        <a href="#choix" id="choixSelect" onclick="reset();">changer de choix</a>
-    </section>
-
+<body class="grid">
+    <header >
+        <h1> MODE DE TRADUCTION</h1>
+        <h2 id="titre"></h2>
+    </header>
     <section>
-        <h2>Traduction</h2>
-        <p id="output">
-    teste
-        </p>
-    </section>
- 
-   
+        
+        <textarea rows="10" cols="50" id="input"></textarea>
+        <br />
 
+    </section>
+    <br />
+
+    <section id="commande">
+        <button id="btnexec">EXECUTION</button>
+        <button   id="inversion">Inverstion</button>
+    </section>
+
+    <section id="traduction">
+        <h2>Traduction</h2>
+        <textarea rows="10" cols="50" id="output" readonly></textarea>
+        
+    </section>
+
+
+    <script src="./main.js"></script>
 </body>
 
 </html>
